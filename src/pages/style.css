@@ -1,0 +1,50 @@
+.card-btn {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border: none;
+  bottom: 10%;
+  color: #FFF;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: FontAwesome;
+  outline: none;
+}
+
+.left {
+  left: 1%;
+  background: grey;
+}
+
+.left::after {
+  content: "\f053";
+}
+
+.right {
+  right: 1%;
+  background: grey;
+}
+
+.right::after {
+  content: "\f054";
+}
+
+.right:hover::after, .left:hover::after {
+  animation: iconBounce .57s 1;
+}
+
+@keyframes iconBounce {
+  0% {
+    font-size: 24px;
+  }
+  
+   50% {
+    font-size: 35px;
+  }
+  
+  100% {
+    font-size: 24px;
+  }
+
+}
