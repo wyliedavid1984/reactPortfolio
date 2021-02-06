@@ -66,8 +66,8 @@ class Portfolio extends Component {
         <h1 className="text-center">
           Made friends with {this.state.matchCount} pups so far!
         </h1> */}
-        <img href={this.state.projects[0].image} />
-        <img href="https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=nqk2hAE034Z3nM%252Czz9fuPcvMCFWiM%252C_&vet=1&usg=AI4_-kQBN2uJGZi48NAC006eTR0dSau1Nw&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgPEAE#imgrc=nqk2hAE034Z3nM" alt="SunCloud"  />
+        <img src={this.state.projects[0].image} />
+        <img src="https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=nqk2hAE034Z3nM%252Czz9fuPcvMCFWiM%252C_&vet=1&usg=AI4_-kQBN2uJGZi48NAC006eTR0dSau1Nw&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgPEAE#imgrc=nqk2hAE034Z3nM" alt="SunCloud"  />
         {this.state.projects.map((project, index) => (
             <div className="card" style={{ backgroundImage: project.image ? `url(${project.image})` : "none"}}>
                 {!project.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" value={project.id}/>}
