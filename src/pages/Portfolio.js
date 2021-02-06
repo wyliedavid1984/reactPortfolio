@@ -3,14 +3,11 @@ import API from "../utils/API";
 import Card from "../components/Card";
 import CardBtn from "../components/CardBtn";
 import "./style.css";
-
+import PageHeader from '../components/PageHeader/PageHeader'
 import projects from "../projects.json"
 
 class Portfolio extends Component {
   state = {
-    image: "",
-    match: false,
-    matchCount: 0,
     projects
   };
 
@@ -27,7 +24,7 @@ class Portfolio extends Component {
     // We'll modify this object and use it to set our component's state
     const newState = { ...this.state };
 
-    if (btnType === "pick") {
+    if (btnType === "right") {
       // Set newState.match to either true or false depending on whether or not the dog likes us (1/5 chance)
       newState.match = 1 === Math.floor(Math.random() * 5) + 1;
 
@@ -57,28 +54,24 @@ class Portfolio extends Component {
   render() {
     return (
       <div>
-          {/* <h2>Hello</h2>
-        <h1 className="text-center">Make New Friends</h1>
-        <h3 className="text-center">
-          Thumbs up on any pups you'd like to meet!
+          <PageHeader />
+        <h1 className="text-center">{this.state.projects[0].title}</h1>
+       
+        <Card image={this.state.projects[0].image} handleBtnClick={this.handleBtnClick} />
+        <h3 className="text-center" style={{maxWidth: "70%", marginLeft:"auto", marginRight:"auto"}}>
+           {this.state.projects[0].about} 
         </h3>
-        <Card image={this.state.image} handleBtnClick={this.handleBtnClick} />
-        <h1 className="text-center">
-          Made friends with {this.state.matchCount} pups so far!
-        </h1> */}
-        <img src={this.state.projects[0].image} />
-        <img src="https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=nqk2hAE034Z3nM%252Czz9fuPcvMCFWiM%252C_&vet=1&usg=AI4_-kQBN2uJGZi48NAC006eTR0dSau1Nw&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgPEAE#imgrc=nqk2hAE034Z3nM" alt="SunCloud"  />
-        {this.state.projects.map((project, index) => (
-            <div className="card" style={{ backgroundImage: project.image ? `url(${project.image})` : "none"}}>
-                {!project.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" value={project.id}/>}
-                <h3 value={index}>{project.id}</h3>
-                <h3 value={index}>{project.title}</h3>
-                <CardBtn className="left card-btn" onClick={this.handleBtnClick} data-value="left" />
-                <CardBtn className="right card-btn"onClick={this.handleBtnClick} data-value="right" />
-            </div>
+        <section className="cardContainer">
+        {this.state.projects.map(project => (
+            <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}}>
+                <h3 className="cardTitle"><a href={project.deployedUrl} target="_blank" style={{color:"black"}}>{project.title}</a></h3>
+                <section className="card" style={{ backgroundImage: project.image ? `url(${project.image})` : "none"}} value={project.id}>
+                {!project.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
+                </section>
+            </section>
         ))
         }
-
+        </section>
       </div>
     );
   }

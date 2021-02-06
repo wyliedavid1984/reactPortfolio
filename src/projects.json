@@ -1,51 +1,58 @@
+
 [
     {
         "id": 1,
-        "deployedUrl": "",
-        "repoUrl": "",
-        "image": "https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=qoUywwOxkQAL9M%252CBQ47Z9dZoxxLLM%252C_&vet=1&usg=AI4_-kR93dZCMKKPzEbK4m7x-Kp2ZWDbdA&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgLEAE#imgrc=qoUywwOxkQAL9M",
-        "technologies":[],
-        "title": "Project1"
+        "deployedUrl": "https://in-solezdw.herokuapp.com/",
+        "repoUrl": "https://github.com/wyliedavid1984/In-Solez",
+        "image": "https://camo.githubusercontent.com/1d63a222199c9d25bf1206a0268c23f4cae74b24172b37ba1f6c3c258bf14978/68747470733a2f2f692e6962622e636f2f424e4d443758422f53637265656e2d53686f742d323032312d30312d31382d61742d31322d34342d31392d414d2e706e67",
+        "technologies":["HandleBars", "JQuery", "Express"],
+        "title": "In-Solez",
+        "about": "A sneaker head application that stores sneaker from your personal collection, and lets you create a wishlist too."
     },
     {
         "id": 2,
-        "deployedUrl": "",
-        "repoUrl": "",
-        "image": "https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=nqk2hAE034Z3nM%252Czz9fuPcvMCFWiM%252C_&vet=1&usg=AI4_-kQBN2uJGZi48NAC006eTR0dSau1Nw&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgPEAE#imgrc=nqk2hAE034Z3nM",
+        "deployedUrl": "https://wyliedavid1984.github.io/HappyTrails/",
+        "repoUrl": "https://github.com/wyliedavid1984/HikingApp",
+        "image": "https://github.com/wyliedavid1984/HappyTrails/raw/main/assets/images/landing_page_screenshot.png",
         "technologies":[],
-        "title": "Project2"
+        "title": "Happy Trails",
+        "about": "A Hiking application that allows you search a city or zip code for local trails. I also allows you to enter a specific radius you'd be willing to travel"
     },
     {
         "id": 3,
-        "deployedUrl": "",
-        "repoUrl": "",
-        "image": "https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=2eIb5BjhQiiZzM%252CnBiD9BWYMB87aM%252C_&vet=1&usg=AI4_-kR6CbaMGgMkliQmryEeHiJjtPmpLw&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgQEAE#imgrc=2eIb5BjhQiiZzM",
+        "deployedUrl": "https://immense-escarpment-41710.herokuapp.com/burgers",
+        "repoUrl": "https://github.com/wyliedavid1984/Eater-App",
+        "image": "https://github.com/wyliedavid1984/Eater-App/raw/main/public/assets/img/devoured.png",
         "technologies":[],
-        "title": "Project3"
+        "title": "Eater App",
+        "about": "A goofy application that let you create any burger you want, eat it, and then clear the plate"
     },
     {
         "id": 4,
-        "deployedUrl": "",
-        "repoUrl": "",
-        "image": "https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=pTd2OIa33-6LVM%252C78aIM0GrmvG9rM%252C_&vet=1&usg=AI4_-kTS06HSsVFKhVRHYBlB2lVuzR50HQ&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgOEAE#imgrc=pTd2OIa33-6LVM",
+        "deployedUrl": "https://wyliedavid1984.github.io/weatherDashboard/",
+        "repoUrl": "https://github.com/wyliedavid1984/weatherDashboard",
+        "image": "https://github.com/wyliedavid1984/weatherDashboard/raw/main/assets/images/loadWithData.png",
         "technologies":[],
-        "title": "Project4"
+        "title": "Weather App",
+        "about": "A weather application that let you check the 5 day forecast of a given city."
     },
     {
         "id": 5,
-        "deployedUrl": "",
-        "repoUrl": "",
-        "image": "https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=a9B7raWE3PxoBM%252CezcoKoowmsJC7M%252C_&vet=1&usg=AI4_-kT5Wzf4-zW6RQc7yR3GKqFMC2wU7Q&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgSEAE#imgrc=a9B7raWE3PxoBM",
+        "deployedUrl": "https://wyliedavid1984.github.io/employeeSearch/",
+        "repoUrl": "https://github.com/wyliedavid1984/employeeSearch",
+        "image": "https://github.com/wyliedavid1984/employeeSearch/raw/main/public/pic.gif",
         "technologies":[],
-        "title": "Project5"
+        "title": "Employee Search Engine",
+        "about": "A search engine application that allows you search for specific names or sort the by last name, city, or DOB."
     },
     {
         "id": 6,
-        "deployedUrl": "",
-        "repoUrl": "",
-        "image": "https://www.google.com/search?q=images&safe=off&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02GN4T4wQl8X8YQS4dHP-vkfkpg6w:1612625039167&tbm=isch&source=iu&ictx=1&fir=wp1tdfttzeGYZM%252CZaycYywhXLmIVM%252C_&vet=1&usg=AI4_-kTT5125F7JKJI_sS3c-RlS4bPWeog&sa=X&ved=2ahUKEwiLzPW0yNXuAhUPd98KHUGlC08Q9QF6BAgREAE#imgrc=wp1tdfttzeGYZM",
+        "deployedUrl": "https://rocky-spire-17040.herokuapp.com/",
+        "repoUrl": "https://github.com/wyliedavid1984/budgetApp",
+        "image": "https://github.com/wyliedavid1984/budgetApp/raw/main/public/assets/img/withData.png",
         "technologies":[],
-        "title": "Project6"
+        "title": "Budget Tracker",
+        "about": "A budget application that help you keep track of cash flow."
     }
 
 
