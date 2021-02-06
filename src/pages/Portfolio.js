@@ -54,7 +54,6 @@ class Portfolio extends Component {
   render() {
     return (
       <div>
-          <PageHeader />
         <h1 className="text-center">{this.state.projects[0].title}</h1>
        
         <Card image={this.state.projects[0].image} handleBtnClick={this.handleBtnClick} />
@@ -62,6 +61,8 @@ class Portfolio extends Component {
            {this.state.projects[0].about} 
         </h3>
         <section className="cardContainer">
+            <br />
+            <br />
         {this.state.projects.map(project => (
             <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}}>
                 <h3 className="cardTitle"><a href={project.deployedUrl} target="_blank" style={{color:"black"}}>{project.title}</a></h3>

@@ -13,7 +13,6 @@ function App() {
     <Router>
       <div style={{background:"grey", color:"whitesmoke"}}>
         <NavigationBar />
-        <PageHeader />
         <Wrapper>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
