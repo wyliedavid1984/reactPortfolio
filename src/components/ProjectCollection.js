@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import projects from "../projects.json"
+import "../pages/style.css"
 
 function ProjectCollection() {
-    const [projectArray, setProjects]=useState(projects)
+    const [arrayProject, setProjects]=useState(projects)
     return (
          <section className="cardContainer">
             <br />
             <br />
-            {projectArray.map(project => {
+            {arrayProject.map(project => {
+                return(
                 <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}}>
-                    <h3 className="cardTitle"><a href={project.deployedUrl} target="_blank" style={{color:"black"}}>{project.title}</a></h3>
+                    <a href={project.deployedUrl} target="_blank" style={{color:"black"}} rel="noreferrer">
+                        <h3 className="cardTitle">{project.title}</h3>
+                    </a>
+                    <a href={project.repoUrl} target="_blank" style={{display:"flex", justifyContent:"center", marginBottom:"5px"}} rel="noreferrer">Repository</a>
                     <section className="card" style={{ backgroundImage: project.image ? `url(${project.image})` : "none"}} key={project.id}>
                     {!project.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
                     </section>
                 </section>
-            })}
+            )})}
         </section>
     )
 }

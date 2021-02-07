@@ -31,7 +31,7 @@ function About() {
               I'm hoping that some of my skills from the restaurant industry will be able to transfer over to the tech world. I have been working and managing teams for the last 13 years, and I know how integral teams are in the tech world. In my role as manager, I have had to hone my communication skills with constant interactions between my staff and guests.
               <br />
               <br />
-              This brought me to the University of Pennsylvania Coding Bootcamp. By the end of this program I will be walking away with a certification for Full Stack Web Development. This certification will help to propel me into the next chapter of my life.
+              This brought me to the University of Pennsylvania Coding Bootcamp. By the end of this program I will be walking away with a certification for Full Stack Web Development. In this camp I've learn how to use HTML, CSS, Javascript, jquery, express, node, MySQL, mongoDb, mongoose, react. This certification is going to give me the the next chapter of my life.
             </p>
           </Col>
         </Row>
