@@ -14,10 +14,10 @@ function App() {
       <div style={{background:"grey", color:"whitesmoke"}}>
         <NavigationBar />
         <Wrapper>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="reactPortFolio/" component={Home} />
+          <Route exact path="reactPortFolio/home" component={Home} />
+          <Route exact path="reactPortFolio/contact" component={Contact} />
+          <Route exact path="reactPortFolio/portfolio" component={Portfolio} />
         </Wrapper>
         <Footer />
       </div>
