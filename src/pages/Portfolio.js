@@ -60,11 +60,11 @@ function Portfolio() {
             <br />
             <br />
             <h1>Hello</h1>
-            {projectArray.map(proj => {
+            {projectArray.map(pro => {
                 <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}}>
-                    <h3 className="cardTitle"><a href={proj.deployedUrl} target="_blank" style={{color:"black"}}>{proj.title}</a></h3>
-                    <section className="card" style={{ backgroundImage: proj.image ? `url(${proj.image})` : "none"}} key={proj.id}>
-                    {!proj.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
+                    <h3 className="cardTitle"><a href={pro.deployedUrl} target="_blank" style={{color:"black"}}>{pro.title}</a></h3>
+                    <section className="card" style={{ backgroundImage: pro.image ? `url(${pro.image})` : "none"}} key={pro.id}>
+                    {!pro.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
                     </section>
                 </section>
             })}
