@@ -2,21 +2,20 @@ import React from 'react'
 
 export default function PageHeader() {
    
-    function headerTitle (location) {
-        let title;
+    const headerTitle = (location) => {
+
         if(location === "/portfolio"){
-            title = "Portfolio";
+            return "Portfolio";
         }else if(location === "/contact"){
-           title = "Contact";
-        } else{
-            title = "Home";
+            return "Contact";
+        }else {
+            return;
         }
-        return title
     }
     return (
-            <>
-                <h2 className="header">{headerTitle(window.location.pathname)}</h2>
-            </>
+        <div>
+            <h2>{headerTitle(window.location.pathname)}</h2>
+        </div>
     )
 }
 

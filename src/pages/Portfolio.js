@@ -1,81 +1,77 @@
-import React, { Component } from "react";
-import API from "../utils/API";
+import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
-import CardBtn from "../components/CardBtn";
 import "./style.css";
-import PageHeader from '../components/PageHeader/PageHeader'
 import projects from "../projects.json"
+import ProjectCollection from "../components/ProjectCollection"
 
-class Portfolio extends Component {
-  state = {
-    projects
-  };
 
-  // When the component mounts, load the next dog to be displayed
-  componentDidMount() {
-    this.loadNextDog();
-    console.log(this.state.projects, "componentDidmount")
-  }
+function Portfolio() {
+   const [project, setProject] = useState({})
+   const [projectArray, setProjects] = useState(projects)
+   const [projectIndex, setProjectIndex] = useState(0);
+   // When the component mounts, load the next dog to be displayed
+   
+    useEffect(()=>{
+        console.log(projectArray)
+        loadProject()
+    }, [])
 
-  handleBtnClick = event => {
-    // Get the data-value of the clicked button
-    const btnType = event.target.attributes.getNamedItem("data-value").value;
-    // Clone this.state to the newState object
-    // We'll modify this object and use it to set our component's state
-    const newState = { ...this.state };
-
-    if (btnType === "right") {
-      // Set newState.match to either true or false depending on whether or not the dog likes us (1/5 chance)
-      newState.match = 1 === Math.floor(Math.random() * 5) + 1;
-
-      // Set newState.matchCount equal to its current value or its current value + 1 depending on whether the dog likes us
-      newState.matchCount = newState.match
-        ? newState.matchCount + 1
-        : newState.matchCount;
-    } else {
-      // If we thumbs down'ed the dog, we haven't matched with it
-      newState.match = false;
+    function nextProject(projectIndex) {
+        // Ensure that the user index stays within our range of users
+        if (projectIndex >= projectArray.length) {
+            projectIndex = 0;
+        }
+        setProject(projectArray[projectIndex]);
+        setProjectIndex(projectIndex);
     }
-    // Replace our component's state with newState, load the next dog image
-    this.setState(newState);
-    this.loadNextDog();
-  };
 
-  loadNextDog = () => {
-    API.getRandomDog()
-      .then(res =>
-        this.setState({
-          image: res.data.message
-        })
-      )
-      .catch(err => console.log(err));
-  };
+    function previousProject(projectIndex) {
+        // Ensure that the project index stays within our range of projects
+        if (projectIndex < 0) {
+            projectIndex = projectArray.length - 1;
+        }
+        setProject(projectArray[projectIndex]);
+        setProjectIndex(projectIndex);
+    }
 
-  render() {
+    function handleBtnClick(event) {
+        // Get the title of the clicked button
+        const btnName = event.target.getAttribute("data-value");
+        if (btnName === "next") {
+            const newIndex = projectIndex + 1;
+            nextProject(newIndex);
+        } else {
+            const newIndex = projectIndex - 1;
+            previousProject(newIndex);
+        }
+    }
+    function loadProject(){
+        setProject(projectArray[0])
+    }
     return (
       <div>
-        <h1 className="text-center">{this.state.projects[0].title}</h1>
-       
-        <Card image={this.state.projects[0].image} handleBtnClick={this.handleBtnClick} />
+        <p className="text-center">Scroll to the bottom to see all the projects at once</p>
+        <h1 className="text-center"><a href={project.deployedUrl} target="_blank">{project.title}</a></h1>
+        <Card image={project.image} handleBtnClick={handleBtnClick} />
         <h3 className="text-center" style={{maxWidth: "70%", marginLeft:"auto", marginRight:"auto"}}>
-           {this.state.projects[0].about} 
+           {project.about} 
         </h3>
         <section className="cardContainer">
             <br />
             <br />
-        {this.state.projects.map(project => (
-            <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}}>
-                <h3 className="cardTitle"><a href={project.deployedUrl} target="_blank" style={{color:"black"}}>{project.title}</a></h3>
-                <section className="card" style={{ backgroundImage: project.image ? `url(${project.image})` : "none"}} value={project.id}>
-                {!project.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
+            <h1>Hello</h1>
+            {projectArray.map(proj => {
+                <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}}>
+                    <h3 className="cardTitle"><a href={proj.deployedUrl} target="_blank" style={{color:"black"}}>{proj.title}</a></h3>
+                    <section className="card" style={{ backgroundImage: proj.image ? `url(${proj.image})` : "none"}} key={proj.id}>
+                    {!proj.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
+                    </section>
                 </section>
-            </section>
-        ))
-        }
+            })}
         </section>
+        <ProjectCollection /> 
       </div>
     );
-  }
 }
 
 export default Portfolio;

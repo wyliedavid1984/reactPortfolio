@@ -4,7 +4,7 @@
   width: 50px;
   position: absolute;
   border: none;
-  bottom: 10%;
+  bottom: 50%;
   color: #FFF;
   font-size: 24px;
   cursor: pointer;
@@ -12,25 +12,25 @@
   outline: none;
 }
 
-.pass {
+.previous {
   left: 1%;
-  background: #E53935;
+  background: lightgray;
 }
 
-.pass::after {
-  content: "\f165";
+.previous::after {
+  content: "\f053";
 }
 
-.pick {
+.next {
   right: 1%;
-  background: #43A047;
+  background: lightgray;
 }
 
-.pick::after {
-  content: "\f164";
+.next::after {
+  content: "\f054";
 }
 
-.pick:hover::after, .pass:hover::after {
+.next:hover::after, .previous:hover::after {
   animation: iconBounce .57s 1;
 }
 
