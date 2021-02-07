@@ -19,7 +19,7 @@ export default function PageHeader() {
     useEffect(() =>{
         console.log(window.location.pathname)
         console.log(headerTitle(window.location.pathname))
-        setPage(headerTitle(window.location.pathname))
+        headerTitle(window.location.pathname)
         console.log({page})
     }, [page])
     return (
