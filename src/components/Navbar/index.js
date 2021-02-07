@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,10 +8,39 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col"
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function NavigationBar() {
- 
-  
+     const [page, setPage] = useState("");
+
+     const headerTitle = (location) => {
+       switch (location) {
+
+         case "/reactPortfolio/portfolio":
+           return setPage("Portfolio");
+           break;
+         case "/reactPortfolio/contact":
+            return setPage("Contact");
+           break;
+         default:
+           return setPage("Home");
+           break;
+       }
+       // if(location === "/reactPortfolio/portfolio"){
+       //     setPage("Portfolio")
+       // }else if(location === "/reactPortfolio/contact"){
+       //     setPage("Contact")
+       // }else{
+       //     setPage("Home")
+       // }
+     }
+     useEffect(() => {
+       console.log(window.location.pathname)
+       console.log(headerTitle(window.location.pathname))
+       headerTitle(window.location.pathname)
+       console.log({
+         page
+       })
+     }, [page])
   return (  
-    <Row style={{display:"flex", justifyContent:"space-around", width:"100%"}}>
+    <Row className="style"style={{}}>
       <Navbar bg="dark" expand="lg" variant="dark" >
         <Col style={{marginLeft:"5px"}}>
         <Navbar.Brand href="#home">
@@ -20,7 +49,7 @@ function NavigationBar() {
         </Col>
         <Col>
         <Navbar.Brand>
-          <PageHeader />
+          <PageHeader page={page} />
         </Navbar.Brand>
         </Col>
         <Col>

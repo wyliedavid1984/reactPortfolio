@@ -1,8 +1,9 @@
 import React,{useEffect, useState} from 'react'
 
 export default function PageHeader() {
-   const [page, setPage]= useState()
-    const headerTitle = (location) => {
+   const [page, setPage]= useState("");
+
+   const headerTitle = (location) => {
         switch (location){
             
             case "/reactPortfolio/portfolio":
@@ -15,6 +16,13 @@ export default function PageHeader() {
                 setPage("Home");
                 break;
         }
+        // if(location === "/reactPortfolio/portfolio"){
+        //     setPage("Portfolio")
+        // }else if(location === "/reactPortfolio/contact"){
+        //     setPage("Contact")
+        // }else{
+        //     setPage("Home")
+        // }
     }
     useEffect(() =>{
         console.log(window.location.pathname)
