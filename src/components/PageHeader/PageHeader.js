@@ -1,20 +1,30 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 
 export default function PageHeader() {
-   
+   const [page, setPage]= useState()
     const headerTitle = (location) => {
-
-        if(location === "/portfolio"){
-            return "Portfolio";
-        }else if(location === "/contact"){
-            return "Contact";
-        }else {
-            return;
+        switch (location){
+            
+            case "/reactPortfolio/portfolio":
+                setPage("Portfolio");
+                break;
+            case "/reactPortfolio/contact":
+                setPage("Contact");
+                break;
+            default:
+                setPage("Home");
+                break;
         }
     }
+    useEffect(() =>{
+        console.log(window.location.pathname)
+        console.log(headerTitle(window.location.pathname))
+        setPage(headerTitle(window.location.pathname))
+        console.log({page})
+    }, [page])
     return (
         <div>
-            <h2>{headerTitle(window.location.pathname)}</h2>
+            <h2>{page}</h2>
         </div>
     )
 }

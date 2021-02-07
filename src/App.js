@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
-import PageHeader from "./components/PageHeader/PageHeader"
 
 function App() {
   return (
@@ -14,10 +13,10 @@ function App() {
       <div style={{background:"grey", color:"whitesmoke"}}>
         <NavigationBar />
         <Wrapper>
-          <Route exact path="reactPortFolio/" component={Home} />
-          <Route exact path="reactPortFolio/home" component={Home} />
-          <Route exact path="reactPortFolio/contact" component={Contact} />
-          <Route exact path="reactPortFolio/portfolio" component={Portfolio} />
+          <Route exact path="/reactPortFolio" component={Home} />
+          <Route exact path="/reactPortFolio/home" component={Home} />
+          <Route exact path="/reactPortFolio/contact" component={Contact} />
+          <Route exact path="/reactPortFolio/portfolio" component={Portfolio} />
         </Wrapper>
         <Footer />
       </div>
