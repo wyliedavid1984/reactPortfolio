@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import "./style.css";
 import projects from "../projects.json"
 import ProjectCollection from "../components/ProjectCollection"
-
+import {motion} from "framer-motion"
 
 function Portfolio() {
    const [project, setProject] = useState({})
@@ -48,7 +48,7 @@ function Portfolio() {
         setProject(projectArray[0])
     }
     return (
-      <div>
+      <motion.div exit={{opacity: 0}} animate={{opacity: 1}} initial={{opacity: 0}} >
         <p className="text-center cardContainer">Scroll to the bottom to see all the projects at once</p>
         <a href={project.deployedUrl} target="_blank" rel="noreferrer"><h1 className="text-center">{project.title}</h1></a>
         <Card image={project.image} handleBtnClick={handleBtnClick} />
@@ -56,7 +56,7 @@ function Portfolio() {
            {project.about} 
         </h3>
         <ProjectCollection /> 
-      </div>
+      </motion.div>
     );
 }
 

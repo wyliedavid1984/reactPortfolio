@@ -4,11 +4,12 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import ricePatty from "../img/background.png"
-import profilePic from "../img/profile.jpg"
+import profilePic from "../img/profile.jpg";
+import {motion} from "framer-motion"
 
 function About() {
   return (
-    <div>
+    <motion.div exit={{opacity: 0}} animate={{opacity: 1}} initial={{opacity: 0}} >
       <Hero backgroundImage={ricePatty}>
         <h1 className="my-element">David Wylie</h1>
         <h2>Full Stack Developer</h2>
@@ -41,7 +42,7 @@ function About() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </motion.div>
   );
 }
 

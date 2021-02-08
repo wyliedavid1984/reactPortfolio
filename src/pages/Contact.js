@@ -1,10 +1,10 @@
 import React from 'react'
 import FullStackResume from "../img/FullStackResume.pdf"
-
+import {motion} from "framer-motion"
 
 export default function Contact() {
     return (
-        <div>
+        <motion.div exit={{opacity: 0}} animate={{opacity: 1}} initial={{opacity: 0}} >
             <h2>Contact Me</h2>
              <hr className="col-11 mt-1 ml-0 pt-0 pb-2" />
             <section className="row">
@@ -25,6 +25,6 @@ export default function Contact() {
                     </p>
                 </label>
             </section>
-        </div>
+        </motion.div>
     )
 }
