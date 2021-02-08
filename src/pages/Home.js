@@ -21,10 +21,10 @@ function About() {
           </Col>
         </Row>
         <Row>
-          <Col size="md-2">
-          <img src={profilePic} style={{height:"300px", width:"190px"}} />
+          <Col size="lg-2"style={{margin: "10px", display:"flex", justifyContent:"center"}} className="picture">
+          <img src={profilePic} className="profilePicture" />
           </Col>
-          <Col size="md-10">
+          <Col size="lg-10" style={{margin: "10px"}}>
             <p>
               Hello, just thought I'd tell you a little bit about myself. I grew up in a military family which gave me the opportunity to see different parts of world. Having moved around as a child sparked my interest in travel and food. I feel bless having been able feast on local foods from all around the world. When I'm not traveling around trying out the local delicacies, I'm in the kitchen with my wife putting together whatever concoctions we can think of. I went to college for hospitality and worked in food service for 21 years.
             </p>
