@@ -9,7 +9,7 @@ import {motion} from "framer-motion"
 
 function About() {
   return (
-    <motion.div exit={{opacity: 0}} animate={{opacity: 1}} initial={{opacity: 0}} >
+    <motion.div exit={{opacity: 0, x:0}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:0}} >
       <Hero backgroundImage={ricePatty}>
         <h1 className="my-element">David Wylie</h1>
         <h2>Full Stack Developer</h2>
