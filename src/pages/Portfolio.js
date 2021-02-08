@@ -50,11 +50,12 @@ function Portfolio() {
     return (
       <motion.div exit={{opacity: 0, x:"-100vw"}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:"-100vw"}} >
         <p className="text-center cardContainer">Scroll to the bottom to see all the projects at once</p>
-        <a href={project.deployedUrl} target="_blank" rel="noreferrer"><h1 className="text-center">{project.title}</h1></a>
+        <a href={project.deployedUrl} target="_blank" rel="noreferrer"><h1 className="text-center linkColor">{project.title}</h1></a>
         <Card image={project.image} handleBtnClick={handleBtnClick} />
         <h3 className="text-center" style={{maxWidth: "70%", marginLeft:"auto", marginRight:"auto"}}>
            {project.about} 
         </h3>
+        <hr className="col-11 mt-1 pt-0 pb-2" />
         <ProjectCollection /> 
       </motion.div>
     );

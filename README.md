@@ -3,11 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-[Link to Deployed app](https://wyliedavid1984.github.io/employeeSearch/)
+[Link to Deployed app](https://wyliedavid1984.github.io/reactPortfolio/)
 
 ## Description 
 
-This my redesigned portfolio using react to build it.
+This my redesigned portfolio using React to build it.
 
 ### Table Of Contents
 
@@ -48,7 +48,7 @@ These page were static and didn't actually make full use of the router. They jus
 
 #### React Bootstrap
 
-I mainly used this for my navigation.
+I mainly used this for my navigation. To setup predefined tags, and for the styling of the tags as well.
 
 ## HTML
 
@@ -67,12 +67,13 @@ I used a mix of bootstrap classes, inline styling, and also css files to help wi
 
 Click on the gif to be linked to the video
 
-![Home](./public/pic.gif)
-![Contact](./public/pic.gif)
-![Portfolio Card](./public/pic.gif)
-![Portfolio Gallery](./public/pic.gif)
+![Home](./public/images/Contact.png)
+![Contact](./public/images/Home.png)
+![Portfolio Card](./public/images/Portfolio.png)
+![Portfolio Gallery](./public/images/Gallery.png)
 
-[![Gif of video](./public/EmployeeSearchEngine.gif)](https://drive.google.com/file/d/127iLex5PZGYRZ1mqpOfqtUMNHi7a_KaJ/view)
+Click on the picture to go to the video
+[![Gif of video](./public/images/WyliePortfolio.gif)](https://drive.google.com/file/d/17f54U5hHzG0ZJ4l-bmEYtJwRTpjactOL/view)
 
 </details>
 

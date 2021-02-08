@@ -19,6 +19,7 @@ function About() {
         <Row>
           <Col size="md-12" style={{mx: "auto"}}>
             <h1 style={{textAlign:"center"}}>About Me</h1>
+            <hr className="col-11 mt-1 ml-0 pt-0 pb-2" />
           </Col>
         </Row>
         <Row>
