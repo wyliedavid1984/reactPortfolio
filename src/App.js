@@ -18,12 +18,10 @@ function App() {
         <NavigationBar />
             <Wrapper>
               <AnimatePresence exitBeforeEnter>
-                <Switch>
-                  <Route exact path="/reactPortFolio" component={Home} />
-                  <Route exact path="/reactPortFolio/home" component={Home} />
-                  <Route exact path="/reactPortFolio/contact" component={Contact} />
-                  <Route exact path="/reactPortFolio/portfolio" component={Portfolio} />
-                </Switch>
+                <Route exact path="/reactPortFolio" component={Home} />
+                <Route exact path="/reactPortFolio/home" component={Home} />
+                <Route exact path="/reactPortFolio/contact" component={Contact} />
+                <Route exact path="/reactPortFolio/portfolio" component={Portfolio} />
               </AnimatePresence>
             </Wrapper>
         <Footer />

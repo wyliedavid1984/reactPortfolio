@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 
 export default function Contact() {
     return (
-        <motion.div exit={{opacity: 0, x:"100%"}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:"100%"}} >
+        <motion.div exit={{opacity: 0, x:"100vw"}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:"100vw"}} >
             <h2>Contact Me</h2>
              <hr className="col-11 mt-1 ml-0 pt-0 pb-2" />
             <section className="row">

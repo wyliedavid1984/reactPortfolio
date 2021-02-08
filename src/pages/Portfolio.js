@@ -48,7 +48,7 @@ function Portfolio() {
         setProject(projectArray[0])
     }
     return (
-      <motion.div exit={{opacity: 0, x:"-100%"}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:"-100%"}} >
+      <motion.div exit={{opacity: 0, x:"-100vw"}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:"-100vw"}} >
         <p className="text-center cardContainer">Scroll to the bottom to see all the projects at once</p>
         <a href={project.deployedUrl} target="_blank" rel="noreferrer"><h1 className="text-center">{project.title}</h1></a>
         <Card image={project.image} handleBtnClick={handleBtnClick} />
