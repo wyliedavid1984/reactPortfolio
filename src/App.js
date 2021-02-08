@@ -6,11 +6,13 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
+import { TitleContext } from './utils/TitleContext';
 
 function App() {
   return (
     <Router>
       <div style={{background:"grey", color:"whitesmoke"}}>
+        {/* <TitleContext> */}
         <NavigationBar />
         <Wrapper>
           <Route exact path="/reactPortFolio" component={Home} />
@@ -19,6 +21,7 @@ function App() {
           <Route exact path="/reactPortFolio/portfolio" component={Portfolio} />
         </Wrapper>
         <Footer />
+        {/* </TitleContext> */}
       </div>
     </Router>
   );

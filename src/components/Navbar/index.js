@@ -8,37 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col"
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function NavigationBar() {
-     const [page, setPage] = useState("");
 
-     const headerTitle = (location) => {
-       switch (location) {
-
-         case "/reactPortfolio/portfolio":
-           return setPage("Portfolio");
-           break;
-         case "/reactPortfolio/contact":
-            return setPage("Contact");
-           break;
-         default:
-           return setPage("Home");
-           break;
-       }
-       // if(location === "/reactPortfolio/portfolio"){
-       //     setPage("Portfolio")
-       // }else if(location === "/reactPortfolio/contact"){
-       //     setPage("Contact")
-       // }else{
-       //     setPage("Home")
-       // }
-     }
-     useEffect(() => {
-       console.log(window.location.pathname)
-       console.log(headerTitle(window.location.pathname))
-       headerTitle(window.location.pathname)
-       console.log({
-         page
-       })
-     }, [page])
   return (  
     <Row className="style"style={{}}>
       <Navbar bg="dark" expand="lg" variant="dark" >
@@ -49,7 +19,7 @@ function NavigationBar() {
         </Col>
         <Col>
         <Navbar.Brand>
-          <PageHeader page={page} />
+          <PageHeader />
         </Navbar.Brand>
         </Col>
         <Col>
