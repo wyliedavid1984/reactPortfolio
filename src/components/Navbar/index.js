@@ -10,8 +10,9 @@ import Col from "react-bootstrap/Col"
 function NavigationBar() {
 
   return (  
-    <Row className="style"style={{}}>
-      <Navbar bg="dark" expand="lg" variant="dark" >
+    <Row>
+      <Navbar bg="dark" expand="lg" variant="dark" style=
+      {{justifyContent:"space-between", width:"100%"}} className="extend">
         <Col style={{marginLeft:"5px"}}>
         <Navbar.Brand href="#home">
           <Link className="navbar-brand" to="/reactPortfolio">DW</Link>
@@ -26,6 +27,10 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-10">
+              
+              <Nav.Link href="#home"><Link to="/reactPortfolio/home" className={window.location.pathname === "/reactPortfolio" || window.location.pathname === "/reactPortfolio/home" ? "nav-link primary": "nav-link"}>Home</Link></Nav.Link>
+              <Nav.Link href="#contact"><Link to="/reactPortfolio/contact" className={window.location.pathname === "/reactPortfolio/contact" ? "nav-link primary" : "nav-link"}>Contact</Link></Nav.Link>
+              <Nav.Link href="#portfolio"> <Link to="/reactPortfolio/portfolio" className={window.location.pathname === "/reactPortfolio/portfolio" ? "nav-link primary" : "nav-link"}>Portfolio</Link></Nav.Link>
               <NavDropdown title="External Links" id="basic-nav-dropdown">
                 <NavDropdown.Item href="https://github.com/wyliedavid1984" rel="noreferrer" target="_blank">
                   <i className="fa fa-github" aria-hidden="true"> </i>Github
@@ -37,9 +42,6 @@ function NavigationBar() {
                   <i className="fa fa-stack-overflow" aria-hidden="true"> </i> StackOverflow
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#home"><Link to="/reactPortfolio/home" className={window.location.pathname === "/reactPortfolio" || window.location.pathname === "/reactPortfolio/home" ? "nav-link primary": "nav-link"}>Home</Link></Nav.Link>
-              <Nav.Link href="#contact"><Link to="/reactPortfolio/contact" className={window.location.pathname === "/reactPortfolio/contact" ? "nav-link primary" : "nav-link"}>Contact</Link></Nav.Link>
-              <Nav.Link href="#portfolio"> <Link to="/reactPortfolio/portfolio" className={window.location.pathname === "/reactPortfolio/portfolio" ? "nav-link primary" : "nav-link"}>Portfolio</Link></Nav.Link>
             </Nav>
           </Navbar.Collapse>
           </Col>

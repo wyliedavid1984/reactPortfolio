@@ -9,6 +9,8 @@ export default function Contact() {
              <hr className="col-11 mt-1 ml-0 pt-0 pb-2" />
             <section className="row">
                 <h2 className="col-3">David Wylie</h2>
+            </section>
+            <section>
                 <a href={FullStackResume} target="_blank">
                     <h3>Resume</h3>
                 </a>
