@@ -4,7 +4,6 @@ export default function PageHeader() {
 
   let location = useLocation();
    const headerTitle = (location) => { 
-    console.log(location)
         switch (location){
             
             case "/reactPortfolio/portfolio":
@@ -14,13 +13,6 @@ export default function PageHeader() {
             default:
                 return "Home";
         }
-        // if(location === "/reactPortfolio/portfolio"){
-        //     setPage("Portfolio")
-        // }else if(location === "/reactPortfolio/contact"){
-        //     setPage("Contact")
-        // }else{
-        //     setPage("Home")
-        // }
     } 
 
     return (

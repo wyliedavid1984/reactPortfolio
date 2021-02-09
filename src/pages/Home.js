@@ -8,8 +8,31 @@ import profilePic from "../img/profile.jpg";
 import {motion} from "framer-motion"
 
 function About() {
-  return (
-    <motion.div exit={{opacity: 0, y:"-100vh"}} animate={{opacity: 1, y:0}} initial={{opacity: 0, y:"-100vh"}} >
+    const pageVariants = {
+        initial:{
+            opacity: 0, 
+            y: "-100vh",
+            scale: .8
+        },
+        in:{
+            opacity: 1, 
+            y: 0,
+            scale: 1
+        },
+        out:{
+            opacity: 0, 
+            y: "100vh",
+            scale: 1.5
+        }
+    }
+    const pageTransition ={
+        type:"tween",
+        ease:"anticipate",
+        duration: .5
+    }
+
+    return (
+        <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
       <Hero backgroundImage={ricePatty}>
         <h1 className="my-element">David Wylie</h1>
         <h2>Full Stack Developer</h2>

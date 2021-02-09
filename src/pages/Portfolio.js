@@ -11,7 +11,6 @@ function Portfolio() {
    const [projectIndex, setProjectIndex] = useState(0);
    
     useEffect(()=>{
-        console.log(projectArray)
         loadProject()
     }, [])
 
@@ -47,8 +46,31 @@ function Portfolio() {
     function loadProject(){
         setProject(projectArray[0])
     }
+        const pageVariants = {
+        initial:{
+            opacity: 0, 
+            y: "-100vh",
+            scale: .8
+        },
+        in:{
+            opacity: 1, 
+            y: 0,
+            scale: 1
+        },
+        out:{
+            opacity: 0, 
+            y: "100vh",
+            scale: 1.3
+        }
+    }
+    const pageTransition ={
+        type:"tween",
+        ease:"anticipate",
+        duration: .5
+    }
+
     return (
-      <motion.div exit={{opacity: 0, x:"-100vw"}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:"-100vw"}} >
+        <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
         <p className="text-center cardContainer">Scroll to the bottom to see all the projects at once</p>
         <a href={project.deployedUrl} target="_blank" rel="noreferrer"><h1 className="text-center linkColor">{project.title}</h1></a>
         <Card image={project.image} handleBtnClick={handleBtnClick} />

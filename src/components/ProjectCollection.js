@@ -10,7 +10,7 @@ function ProjectCollection() {
             <br />
             {arrayProject.map(project => {
                 return(
-                <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}}>
+                <section style={{pt:"10px",  marginRight:"10px", marginLeft:"10px"}} key={project.id}>
                     <a href={project.deployedUrl} target="_blank" style={{color:"black"}} rel="noreferrer">
                         <h3 className="cardTitle">{project.title}</h3>
                     </a>

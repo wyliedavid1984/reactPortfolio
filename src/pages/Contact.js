@@ -4,8 +4,31 @@ import {motion} from "framer-motion"
 import Container from "../components/Container"
 
 export default function Contact() {
+    const pageVariants = {
+        initial:{
+            opacity: 0, 
+            y: "-100vh",
+            scale: .8
+        },
+        in:{
+            opacity: 1, 
+            y: 0,
+            scale: 1
+        },
+        out:{
+            opacity: 0, 
+            y: "100vh",
+            scale: 1.5
+        }
+    }
+    const pageTransition ={
+        type:"tween",
+        ease:"anticipate",
+        duration: .5
+    }
+
     return (
-        <motion.div exit={{opacity: 0, x:"100vw"}} animate={{opacity: 1, x:0}} initial={{opacity: 0, x:"100vw"}} >
+        <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
             <Container style={{height: "70vh"}}>
             <h2>Contact Me</h2>
              <hr className="col-11 mt-1 ml-0 pt-0 pb-2" />
