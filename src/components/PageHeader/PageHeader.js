@@ -1,5 +1,5 @@
-import React,{useEffect, useState} from 'react'
-import {useLocation, Switch} from "react-router-dom"
+import React from 'react'
+import {useLocation} from "react-router-dom"
 export default function PageHeader() {
 
   let location = useLocation();
@@ -14,7 +14,6 @@ export default function PageHeader() {
                 return "Home";
         }
     } 
-
     return (
         <div>
             <h2>{headerTitle(location.pathname)}</h2>
