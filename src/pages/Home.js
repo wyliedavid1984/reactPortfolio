@@ -46,7 +46,7 @@ function About() {
           </Col>
         </Row>
         <Row>
-          <Col size="lg-2"style={{margin: "10px", display:"flex", justifyContent:"center"}} className="picture">
+          <Col size="lg-2"  className="picture" style={{display:"flex", justifyContent:"center"}}>
           <img src={profilePic} className="profilePicture" />
           </Col>
           <Col size="lg-10" style={{margin: "10px"}}>

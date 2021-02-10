@@ -15,9 +15,9 @@ export default function PageHeader() {
         }
     } 
     return (
-        <div>
+        <section>
             <h2>{headerTitle(location.pathname)}</h2>
-        </div>
+        </section>
     )
 }
 
