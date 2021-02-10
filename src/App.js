@@ -11,7 +11,7 @@ import {AnimatePresence} from 'framer-motion'
 function App() {
   let location = useLocation();
   return (
-      <div style={{background:"grey", color:"whitesmoke"}}>
+      <section style={{background:"grey", color:"whitesmoke"}}>
         <NavigationBar />
             <Wrapper>
               <AnimatePresence exitBeforeEnter>
@@ -32,7 +32,7 @@ function App() {
               </AnimatePresence>
             </Wrapper>
         <Footer />
-      </div>
+      </section>
   );
 }
 
