@@ -20,12 +20,12 @@
     },
     {
         "id": 3,
-        "deployedUrl": "https://immense-escarpment-41710.herokuapp.com/burgers",
-        "repoUrl": "https://github.com/wyliedavid1984/Eater-App",
-        "image": "https://github.com/wyliedavid1984/Eater-App/raw/main/public/assets/img/devoured.png",
-        "technologies":["JQuery", "Mongo", "Mongoose", "Express", "Node", "HandleBars"],
-        "title": "Eater App",
-        "about": "A goofy application that let you create any burger you want, eat it, and then clear the plate"
+        "deployedUrl": "https://rydr-app.herokuapp.com/",
+        "repoUrl": "https://github.com/natemking/rydr",
+        "image": "https://github.com/natemking/rydr/blob/main/client/public/imgs/RydrMainPage.jpg",
+        "technologies":["Mongo", "Mongoose", "Express", "Node", "React", "Passport", "JWT"],
+        "title": "Rydr",
+        "about": "App where artist sign up and can rate venues."
     },
     {
         "id": 4,
