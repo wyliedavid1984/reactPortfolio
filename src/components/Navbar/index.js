@@ -37,9 +37,6 @@ function NavigationBar() {
                 <NavDropdown.Item href="https://www.linkedin.com/in/david-wylie-1826b41b8/" rel="noreferrer" target="_blank">
                   <i className="fa fa-linkedin-square" aria-hidden="true"> </i>LinkedIn
                 </NavDropdown.Item>
-                <NavDropdown.Item href="https://stackoverflow.com/users/14358043/david-wylie" rel="noreferrer" target="_blank">
-                  <i className="fa fa-stack-overflow" aria-hidden="true"> </i> StackOverflow
-                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
