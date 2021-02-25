@@ -20,7 +20,7 @@
     },
     {
         "id": 1,
-        "deployedUrl": "https://rydr-app.herokuapp.com/",
+        "deployedUrl": "https://rydr.vps.natemking.dev/#/",
         "repoUrl": "https://github.com/natemking/rydr",
         "image": "https://github.com/natemking/rydr/blob/main/client/public/imgs/RydrMainPage.jpg?raw=true",
         "technologies":["Mongo", "Mongoose", "Express", "Node", "React", "Passport", "JWT"],
