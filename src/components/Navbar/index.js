@@ -30,6 +30,7 @@ function NavigationBar() {
               <Nav.Link href="#contact"><Link to="/reactPortfolio/contact" className={window.location.pathname === "/reactPortfolio/contact" ? "nav-link primary" : "nav-link"}>Contact</Link></Nav.Link>
               <Nav.Link href="#home"><Link to="/reactPortfolio/home" className={window.location.pathname === "/reactPortfolio" || window.location.pathname === "/reactPortfolio/home" ? "nav-link primary": "nav-link"}>Home</Link></Nav.Link>
               <Nav.Link href="#portfolio"> <Link to="/reactPortfolio/portfolio" className={window.location.pathname === "/reactPortfolio/portfolio" ? "nav-link primary" : "nav-link"}>Portfolio</Link></Nav.Link>
+              <Nav.Link>
               <NavDropdown title="External Links" id="basic-nav-dropdown">
                 <NavDropdown.Item href="https://github.com/wyliedavid1984" rel="noreferrer" target="_blank">
                   <i className="fa fa-github" aria-hidden="true"> </i>Github
@@ -38,6 +39,7 @@ function NavigationBar() {
                   <i className="fa fa-linkedin-square" aria-hidden="true"> </i>LinkedIn
                 </NavDropdown.Item>
               </NavDropdown>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
           </Col>

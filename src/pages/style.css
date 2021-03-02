@@ -1,3 +1,9 @@
+p{
+  text-align: center;
+}
+.marginSpace{
+  margin: 10px
+}
 .linkColor{
   color: lightskyblue;
 }
@@ -79,7 +85,11 @@ margin-top: 20px;
   .profilePicture{
     height: 250px;
     width: 150px;
-    
+    justify-content: center;
+  }
+  .tagSection{
+    justify-content: center;
+    width: 40%;
   }
 }
 
