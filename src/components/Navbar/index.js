@@ -10,7 +10,7 @@ import Col from "react-bootstrap/Col"
 function NavigationBar() {
 
   return (  
-    <Row>
+    <Row style={{marginright:"0px", marginleft:"0px"}}>
       <Navbar bg="dark" expand="lg" variant="dark" style=
       {{justifyContent:"space-between", width:"100%"}} className="extend">
         <Col style={{marginLeft:"5px"}}>
