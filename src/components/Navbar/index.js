@@ -10,11 +10,10 @@ import Col from "react-bootstrap/Col"
 function NavigationBar() {
 
   return (  
-    <Row style={{marginright:"0px", marginleft:"0px"}}>
       <Navbar bg="dark" expand="lg" variant="dark" style=
-      {{justifyContent:"space-between", width:"100%"}} className="extend">
+      {{justifyContent:"space-between"}} className="extend">
         <Col style={{marginLeft:"5px"}}>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" style={{marginLeft:"20px"}}>
           <Link className="navbar-brand" to="/reactPortfolio">DW</Link>
         </Navbar.Brand>
         </Col>
@@ -44,7 +43,6 @@ function NavigationBar() {
           </Navbar.Collapse>
           </Col>
       </Navbar>
-    </Row>
   );
 }
 
