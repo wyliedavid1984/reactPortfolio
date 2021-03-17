@@ -1,11 +1,20 @@
 
 [
     {
+        "id": 1,
+        "deployedUrl": "https://rydr.vps.natemking.dev/#/",
+        "repoUrl": "https://github.com/natemking/rydr",
+        "image": "https://github.com/natemking/rydr/blob/main/client/public/imgs/RydrMainPage.jpg?raw=true",
+        "technologies":["Mongo | ", "Mongoose | ", "Express | ", "Node | ", "React | ", "Passport | ", "JWT"],
+        "title": "Rydr",
+        "about": "App where artist sign up and can rate venues."
+    },
+    {
         "id": 2,
         "deployedUrl": "https://in-solezdw.herokuapp.com/",
         "repoUrl": "https://github.com/wyliedavid1984/In-Solez",
         "image": "https://camo.githubusercontent.com/1d63a222199c9d25bf1206a0268c23f4cae74b24172b37ba1f6c3c258bf14978/68747470733a2f2f692e6962622e636f2f424e4d443758422f53637265656e2d53686f742d323032312d30312d31382d61742d31322d34342d31392d414d2e706e67",
-        "technologies":["HandleBars", "JQuery", "Express", "MySQL"],
+        "technologies":["HandleBars | ", "JQuery | ", "Express | ", "MySQL | ", "Passport"],
         "title": "In-Solez",
         "about": "A sneaker head application that stores sneaker from your personal collection, and lets you create a wishlist too."
     },
@@ -14,25 +23,17 @@
         "deployedUrl": "https://wyliedavid1984.github.io/HappyTrails/",
         "repoUrl": "https://github.com/wyliedavid1984/HikingApp",
         "image": "https://github.com/wyliedavid1984/HappyTrails/raw/main/assets/images/landing_page_screenshot.png",
-        "technologies":["JQuery", "Javascript", "HTML", "Bulma"],
+        "technologies":["JQuery | ", "Javascript | ", "HTML | ", "Bulma"],
         "title": "Happy Trails",
         "about": "A Hiking application that allows you search a city or zip code for local trails. I also allows you to enter a specific radius you'd be willing to travel"
     },
-    {
-        "id": 1,
-        "deployedUrl": "https://rydr.vps.natemking.dev/#/",
-        "repoUrl": "https://github.com/natemking/rydr",
-        "image": "https://github.com/natemking/rydr/blob/main/client/public/imgs/RydrMainPage.jpg?raw=true",
-        "technologies":["Mongo", "Mongoose", "Express", "Node", "React", "Passport", "JWT"],
-        "title": "Rydr",
-        "about": "App where artist sign up and can rate venues."
-    },
+    
     {
         "id": 4,
         "deployedUrl": "https://wyliedavid1984.github.io/weatherDashboard/",
         "repoUrl": "https://github.com/wyliedavid1984/weatherDashboard",
         "image": "https://github.com/wyliedavid1984/weatherDashboard/raw/main/assets/images/loadWithData.png",
-        "technologies":["API", "MySQL"],
+        "technologies":["HTML | ", "CSS | ", "Javascript | ", "MySQL"],
         "title": "Weather App",
         "about": "A weather application that let you check the 5 day forecast of a given city."
     },
@@ -41,7 +42,7 @@
         "deployedUrl": "https://wyliedavid1984.github.io/employeeSearch/",
         "repoUrl": "https://github.com/wyliedavid1984/employeeSearch",
         "image": "https://github.com/wyliedavid1984/employeeSearch/raw/main/public/pic.gif",
-        "technologies":[],
+        "technologies":["React | ", "Javascript | ", "Axios | ", "GH-pages | "],
         "title": "Employee Search Engine",
         "about": "A search engine application that allows you search for specific names or sort the by last name, city, or DOB."
     },
@@ -50,7 +51,7 @@
         "deployedUrl": "https://rocky-spire-17040.herokuapp.com/",
         "repoUrl": "https://github.com/wyliedavid1984/budgetApp",
         "image": "https://github.com/wyliedavid1984/budgetApp/raw/main/public/assets/img/withData.png",
-        "technologies":[],
+        "technologies":["MongoDB | ", "Node | ", "JQuery | ", "Mongoose | ", "Express"],
         "title": "Budget Tracker",
         "about": "A budget application that help you keep track of cash flow."
     }

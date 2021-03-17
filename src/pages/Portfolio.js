@@ -9,6 +9,7 @@ function Portfolio() {
    const [project, setProject] = useState({})
    const [projectArray, setProjects] = useState(projects)
    const [projectIndex, setProjectIndex] = useState(0);
+   const [techArray, setTechArray] = useState();
    
     useEffect(()=>{
         loadProject()
@@ -20,7 +21,9 @@ function Portfolio() {
             projectIndex = 0;
         }
         setProject(projectArray[projectIndex]);
+        setTechArray(projectArray[projectIndex].technologies);
         setProjectIndex(projectIndex);
+        console.log(techArray);
     }
 
     function previousProject(projectIndex) {
@@ -29,7 +32,9 @@ function Portfolio() {
             projectIndex = projectArray.length - 1;
         }
         setProject(projectArray[projectIndex]);
+        setTechArray(projectArray[projectIndex].technologies);
         setProjectIndex(projectIndex);
+        console.log(techArray);
     }
 
     function handleBtnClick(event) {
@@ -43,9 +48,11 @@ function Portfolio() {
             previousProject(newIndex);
         }
     }
-    function loadProject(){
-        setProject(projectArray[0])
+    async function loadProject(){
+        await setProject(projectArray[0]);
+        await setTechArray(projectArray[0].technologies);
     }
+  
         const pageVariants = {
         initial:{
             opacity: 0, 
@@ -68,6 +75,7 @@ function Portfolio() {
         ease:"anticipate",
         duration: .5
     }
+    
 
     return (
         <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
@@ -79,6 +87,7 @@ function Portfolio() {
             <h3 className="text-center" style={{maxWidth: "70%", marginLeft:"auto", marginRight:"auto"}}>
             {project.about} 
             </h3>
+              <p>Technologies: {techArray}</p>
             <hr className="col-11 mt-1 pt-0 pb-2" />
         <ProjectCollection /> 
       </motion.div>

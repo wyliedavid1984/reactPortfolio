@@ -41,12 +41,11 @@ export default function Contact() {
                 </a>
             </section>
             <section className="col-md-6">
-                <label for="Email" className="form-label">Email: wyliedavid@hotmail.com</label>
+                <label for="Email" className="form-label">Email: <a href="mailto:wyliedavid1984@gmail.com" className="linkColor">wyliedavid1984@gmail.com</a></label>
             </section>
             <section className="col-12">
                 <label for="inputAddress" className="form-label">
-                    <p>Cell Phone: 302-478-5655 <br />
-                        Home Phone: 302-377-3433
+                    <p>Cell Phone: 302-377-2300
                     </p>
                 </label>
             </section>

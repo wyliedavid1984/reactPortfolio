@@ -80,12 +80,10 @@ margin-top: 20px;
   .picture{
     margin: 0 auto;
     display: flex;
-    justify-content: center;
   }
   .profilePicture{
     height: 250px;
     width: 150px;
-    justify-content: center;
   }
   .tagSection{
     justify-content: center;
