@@ -7,17 +7,17 @@ export default function Contact() {
     const pageVariants = {
         initial:{
             opacity: 0, 
-            y: "-100vh",
+            x: "100vh",
             scale: .8
         },
         in:{
             opacity: 1, 
-            y: 0,
+            x: 0,
             scale: 1
         },
         out:{
             opacity: 0, 
-            y: "100vh",
+            x: "100vh",
             scale: 1.5
         }
     }
